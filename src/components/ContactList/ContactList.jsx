@@ -8,9 +8,9 @@ import Contact from '../Contact/Contact';
         const visibleContact = Array.isArray(contacts) ? contacts.filter((contact) => contact.name.toLowerCase().includes(filter.toLowerCase())) : [];
 
     return (
-        <ul>
+        <ul className={css.contactList}>
             {visibleContact.map((contact) => (
-                <li key={contact.id}>
+                <li key={contact.id} className={css.contactItem}>
                     <Contact user={contact}/>
                 </li>
             ))}
