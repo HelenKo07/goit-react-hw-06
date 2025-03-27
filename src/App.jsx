@@ -1,15 +1,16 @@
 import "./App.css";
 import ContactForm from "./components/ContactForm/ContactForm";
 import ContactList from "./components/ContactList/ContactList";
-import SearchForm from "./components/SearchBox/SearchBox";
+import SearchBox from "./components/SearchBox/SearchBox";
 
 function App() {
   return (
-    <>
-      <ContactForm />
-      <SearchForm />
-      <ContactList />
-    </>
+    <div>
+    <h1>Phonebook</h1>
+    <ContactForm />
+    <SearchBox />
+    <ContactList/>
+  </div>
   );
 }
 

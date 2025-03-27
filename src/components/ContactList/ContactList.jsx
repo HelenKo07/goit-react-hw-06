@@ -5,7 +5,7 @@ import Contact from '../Contact/Contact';
     export default function ContactList() {
         const contacts = useSelector((state) => state.contacts.items);
         const filter = useSelector((state) => state.filters.name);
-        const visibleContact = contacts.filter((contact) => contact.name.toLowerCase().includes(filter.toLowerCase));
+        const visibleContact = Array.isArray(contacts) ? contacts.filter((contact) => contact.name.toLowerCase().includes(filter.toLowerCase())) : [];
 
     return (
         <ul>
